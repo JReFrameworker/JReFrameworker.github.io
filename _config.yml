@@ -9,7 +9,7 @@ name: JReFrameworker
 description: Practical Managed Code Rootkits for Java
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://ben-holland.com/JReFrameworker/images/JReFrameworker.png
+avatar: https://jreframeworker.com/images/JReFrameworker.png
 
 #
 # Flags below are optional
@@ -21,7 +21,7 @@ footer-links:
   email: jreframeworker@ben-holland.com
   facebook:
   flickr:
-  github: benjholla/JReFrameworker
+  github: JReFrameworker/JReFrameworker
   instagram:
   linkedin:
   pinterest:
@@ -40,13 +40,13 @@ google_analytics: UA-64320378-1
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: https://ben-holland.com/JReFrameworker/
+url: https://jreframeworker.com/
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
-baseurl: "/JReFrameworker"
+baseurl: "/"
 
 #
 # !! You don't need to change any of the configuration flags below !!
