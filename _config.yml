@@ -82,6 +82,7 @@ exclude:
 
 # Include the following files and directories
 include:
+    - favicon/
     - updates/
     - javadoc/
     - tutorial/
