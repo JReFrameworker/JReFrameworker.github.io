@@ -16,11 +16,11 @@ JReFrameworker is a tool that allows a user to write annotated Java source that 
 
 Ready to get started?
 
-1. First [install](/JReFrameworker/install) the JReFrameworker plugin.
-2. Then check out the provided [tutorials](/JReFrameworker/tutorials) to get started hacking your first attack module.
+1. First [install](/install) the JReFrameworker plugin.
+2. Then check out the provided [tutorials](/tutorials) to get started hacking your first attack module.
 
 ## Source Code
 
-Need additional resources?  Checkout the [Javadocs](/JReFrameworker/javadoc/index.html) or grab a copy of the [source](https://github.com/benjholla/JReFrameworker).
+Need additional resources?  Checkout the [Javadocs](/javadoc/index.html) or grab a copy of the [source](https://github.com/JReFrameworker/JReFrameworker).
 
-If you find a problem please [report an issue](https://github.com/benjholla/JReFrameworker/issues). If you want to help, [pull requests](https://github.com/benjholla/JReFrameworker/pulls) are always welcome.
+If you find a problem please [report an issue](https://github.com/JReFrameworker/JReFrameworker/issues). If you want to help, [pull requests](https://github.com/JReFrameworker/JReFrameworker/pulls) are always welcome.
