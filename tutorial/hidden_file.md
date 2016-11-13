@@ -194,7 +194,7 @@ Inspecting the modified version of `java.io.File` shows that the original `File.
 Inspecting the new version of `java.io.File` reveals that the new `File.exists()` method first calls `File.isFile()` and then `File.getName()` to check if the `File` is a file (and not a directory) and that the filename equals "secretFile".  If both conditions are true, then the boolean value of false is returned immediately. Otherwise the value of `File.jref_exists()` is returned.
 
 {: style="text-align: center"}
-![Decompiled Original Method](/tutorial/hidden_file_images/NewMethod.png)
+![Decompiled New Method](/tutorial/hidden_file_images/NewMethod.png)
 
 Note that if we inspect at the bytecode level, we would find that special invocations through *super* calls are replaced with dynamic invocations and all instruction owners have been remapped from the subclass type to the base class type where applicable. 
 
@@ -222,10 +222,10 @@ Before we begin testing, we should remember to revert our test logic back to the
 Now that our test logic is using whatever implementation of `java.io.File` exists in the runtime environment we can run it again as a standard Java application.  It should return true as is the normal expectation of the runtime. To run `Test` again with the modified runtime use the JReFrameworker *Run* or *Debug* launch profile as shown in the image below.
 
 {: style="text-align: center"}
-![Decompiled Original Method](/tutorial/hidden_file_imagesRunConfiguration.png)
+![Run Configuration](/tutorial/hidden_file_images/RunConfiguration.png)
 
 Running with either of these launch profiles runs `Test` in the modified runtime (located at `<project>/runtimes/rt.jar`).  If everything was done correctly, the test program should return false! We will cover the steps to deploy the module's bytecode manipulations on a victims machine in a later step.
 
 At this point you can save and share your module with others by right clicking on the project and navigating to `Export...` &gt; `General` &gt; `Archive File` and saving the project as an archive file.
 
-You can download the module created during this tutorial [here](https://ben-holland.com/module/HiddenFile.zip).
+You can download the module created during this tutorial at [https://github.com/JReFrameworker/modules/tree/master/HiddenFile](https://github.com/JReFrameworker/modules/tree/master/HiddenFile).
