@@ -4,7 +4,7 @@ title: Install
 permalink: /install/
 ---
 
-Installing the JReFrameworker Eclipse plugin is easy.  It is recommended to install the plugin from the provided update site, but it is also possible to install from source. The current version of JReFrameworker has been tested on [Eclipse Luna](https://eclipse.org/luna/) and [Eclipse Mars](https://www.eclipse.org/downloads/packages/release/Mars/1).
+Installing the JReFrameworker Eclipse plugin is easy.  It is recommended to install the plugin from the provided update site, but it is also possible to install from source. The current version of JReFrameworker has been tested on [Eclipse Neon](https://www.eclipse.org/neon/) ([Eclipse Luna](https://eclipse.org/luna/) and [Eclipse Mars](https://www.eclipse.org/mars/) should work as well).
         
 ## Installing from update site
 Follow the steps below to install the JReFrameworker plugin from the Eclipse update site.
@@ -21,6 +21,11 @@ Follow the steps below to install the JReFrameworker plugin from the Eclipse upd
 If you want to install from source for bleeding edge changes, first grab a copy of the [source](https://github.com/JReFrameworker/JReFrameworker) repository. In the Eclipse workspace, import the `jreframeworker`, `jreframeworker.engine`, and `org.objectweb.asm` Eclipse projects located in the source repository. Note that you must have the Eclipse Plugin Development Tools installed in Eclipse to compile the plugin projects. Right click on the `jreframeworker` project and select `Export`.  Select `Plug-in Development` &gt; `Deployable plug-ins and fragments`.  Select the `Install into host. Repository:` radio box and click `Finish`.  Press `OK` for the notice about unsigned software.  Once Eclipse restarts the plugin will be installed.
 
 ## Changelog
+
+### 1.2.0
+- DEFCON 24 release, migrated to Eclipse Neon
+- Support for advanced annotation features to configure finality and visibility (helpful for manipulating private final implementations)
+- Multiple bug and stability fixes
 
 ### 1.1.1
 - Improved payload dropper with new command line options for specifying non-standard runtime locations and for specifying output options
