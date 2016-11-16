@@ -6,6 +6,8 @@ layout: default
 
 This tool was presented at [DEFCON 24](https://www.defcon.org/html/defcon-24/dc-24-speakers.html#Holland). Thanks to all those that attended!
 
+<center><iframe width="560" height="315" src="//www.youtube.com/embed/zomaLPN2KNY" frameborder="0" allowfullscreen></iframe></center>
+
 ## JReFrameworker
 This project aims to extend previous works by [Erez Metula](https://appsec-labs.com/managed_code_rootkits) by introducing JReFrameworker, a tool to produce MCR capabilities aimed at the Java Runtime Environment in a user-friendly way. 
 
