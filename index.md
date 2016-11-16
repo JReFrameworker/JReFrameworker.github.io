@@ -16,7 +16,7 @@ Ready to get started?
 2. Then check out the provided [tutorials](/tutorials) to get started hacking your first attack module.
 
 ## Materials
-This tool was presented at [DEFCON 24](https://www.defcon.org/html/defcon-24/dc-24-speakers.html#Holland). Thanks to all those that attended! The JReFramewokrer modules developed for the presentation are available in the [github.com/JReFrameworker/modules](https://github.com/JReFrameworker/modules) repository.
+This tool was presented at [DEFCON 24](https://www.defcon.org/html/defcon-24/dc-24-speakers.html#Holland). Thanks to all those that attended! The JReFrameworker modules developed for the presentation are available in the [github.com/JReFrameworker/modules](https://github.com/JReFrameworker/modules) repository.
 
 <center><iframe width="560" height="315" src="//www.youtube.com/embed/zomaLPN2KNY" frameborder="0" allowfullscreen></iframe></center>
 
