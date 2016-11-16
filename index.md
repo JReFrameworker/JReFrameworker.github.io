@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<center><img src="/images/Java-Evil-Edition-Horizontal.jpg" alt="Java Evil Edition" style="max-width:100%;"></center>
+<center><img src="/images/Java-Evil-Edition-Horizontal.jpg" alt="Java Evil Edition" style="max-width:65%;"></center>
 
 ## JReFrameworker
 This project aims to extend previous works by [Erez Metula](https://appsec-labs.com/managed_code_rootkits) by introducing JReFrameworker, a tool to produce MCR capabilities aimed at the Java Runtime Environment in a user-friendly way. 
