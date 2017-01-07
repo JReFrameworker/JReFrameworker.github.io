@@ -233,3 +233,7 @@ Running with either of these launch profiles runs `Test` in the modified runtime
 At this point you can save and share your module with others by right clicking on the project and navigating to `Export...` &gt; `General` &gt; `Archive File` and saving the project as an archive file.
 
 You can download the module created during this tutorial at [https://github.com/JReFrameworker/modules/tree/master/HiddenFile](https://github.com/JReFrameworker/modules/tree/master/HiddenFile).
+
+A video demonstration of developing this module can be seen at the 7 minute 28 second mark in the video below.
+
+<center><iframe width="560" height="315" src="//www.youtube.com/embed/xuvQ4jZPriI&t=7m28s" frameborder="0" allowfullscreen></iframe></center>
