@@ -251,11 +251,11 @@ blockquote {
 }
 
 pre {
+  resize: none;
+  overflow: hidden;
+  box-shadow: none;
   code {
     border: none;
-	resize: none;
-	overflow: hidden;
-	box-shadow: none;
   }
 }
 
