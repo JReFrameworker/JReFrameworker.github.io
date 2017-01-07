@@ -1,5 +1,7 @@
 ---
-layout: default
+layout: post
+title: Hello World
+draft: false
 ---
 
 This brief tutorial demonstrates what JReFrameworker aims to accomplish.

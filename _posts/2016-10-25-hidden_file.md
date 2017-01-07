@@ -1,5 +1,7 @@
 ---
-layout: default
+layout: post
+title: Hidden File
+draft: false
 ---
 
 This extended introductory tutorial demonstrates how to create a simple attack module to hide a file using JReFrameworker and provides a basic understanding of the underlying bytecode manipulations performed by the tool.
