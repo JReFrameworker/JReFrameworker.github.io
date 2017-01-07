@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Payload Deployment
-draft: false
+draft: true
 ---
 
 This tutorial demonstrates how to modify a victim machine's runtime using a JReFrameworker module.
