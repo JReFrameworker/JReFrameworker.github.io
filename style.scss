@@ -253,6 +253,9 @@ blockquote {
 pre {
   code {
     border: none;
+	resize: none;
+	overflow: hidden;
+	box-shadow: none;
   }
 }
 
