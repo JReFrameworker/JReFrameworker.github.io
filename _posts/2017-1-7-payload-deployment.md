@@ -1,0 +1,29 @@
+---
+layout: post
+title: Payload Deployment
+draft: true
+---
+
+This tutorial demonstrates how to modify a victim machine's runtime using a JReFrameworker module.
+
+If you haven't already, you should complete the first two tutorials ([Hello World](./hello-world) and [Hidden File](./hidden-file)) to become familiar with the basics of JReFrameworker.
+
+<a name="Setup" />
+
+## Lab Setup
+
+You will also need to setup a small laboratory test environment that includes the following.
+
+1. A victim machine (this tutorial uses a fresh install of Windows 7 in a virtual machine, but any OS capable of running Java will work).
+2. An attacker machine with [Metasploit](https://www.metasploit.com/) installed (this tutorial uses a [Kali Linux virtual machine](https://www.offensive-security.com/kali-linux-vmware-virtualbox-image-download/)).
+3. An installation of JReFrameworker (this tutorial uses the host machine, but any OS that can run [Eclipse](https://eclipse.org/) with JReFrameworker installed will work).
+
+**Note:** For this tutorial we will be using [VMWare](https://www.vmware.com) virtual machines with our victim at `192.168.1.2` and our attacker at `192.168.1.3`. [Virtualbox](https://www.virtualbox.org) is a good free alternative to VMWare. The next section continues the lab setup to get an active [Metasploit Meterpreter](https://www.offensive-security.com/metasploit-unleashed/about-meterpreter/) session on the victim machine. If your lab setup is different and you have a working exploit already, skip to the [Post Exploitation](#PostExploitation) section below.
+
+<a name="Exploitation" />
+
+## Exploitation
+
+<a name="PostExploitation" />
+
+## Post Exploitation
