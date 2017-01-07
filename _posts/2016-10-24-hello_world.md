@@ -2,6 +2,8 @@
 layout: default
 ---
 
+This brief tutorial demonstrates what JReFrameworker aims to accomplish.
+
 Take a look at the following code. You've probably even written this exact snippet before. What is the output?
 
 	public class Test {
@@ -15,7 +17,7 @@ Take a look at the following code. You've probably even written this exact snipp
 Would you be suprised if the output was `!dlroW olleH` and not `Hello World!`?  How could this be possible?  There are no tricks in this program.  It's the standard hello world program you've seen a hundred times before.
 
 {: style="text-align: center"}
-![Unexpected Output](/tutorial/hello_world_images/BackwardsHelloWorld.png)
+![Unexpected Output](../images/hello_world/BackwardsHelloWorld.png)
 
 This behavior is possible if the underlying Java libraries (the Java Runtime Environment) were modified. Since making bytecode manipulations manually would require a deep understanding of the Java bytecode instructions as well as recomputing stack frame sizes to account for instruction changes. Some tools have used intermediate representations (IRs) that can dissassemble and reassemble bytecode, but most developers are not familiar with various IRs and there is poor tool support for serious development tasks.  Worse yet, the ["write once, run anywhere"](https://en.wikipedia.org/wiki/Write_once,_run_anywhere) motto of managed languages is violated when dealing with runtime libraries, forcing the developer to to rewrite modifications for each target platform.
 
