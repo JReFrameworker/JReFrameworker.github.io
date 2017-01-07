@@ -254,9 +254,6 @@ pre {
   resize: none;
   overflow: hidden;
   box-shadow: none;
-  code {
-    border: none;
-  }
 }
 
 code {
@@ -265,6 +262,14 @@ code {
   padding-right: 2px;
   background-color: $lightGray;
 }
+
+pre {  
+  code {
+    border: none;
+  }
+}
+
+
 
 .posts > .post {
   padding-bottom: 2em;
