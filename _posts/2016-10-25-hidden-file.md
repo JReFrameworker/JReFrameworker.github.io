@@ -15,12 +15,12 @@ Each "module" consists of an Eclipse JReFrameworker project.  A module consists 
 To create a new attack module, navigate to `File` &gt; `New` &gt; `Other...` &gt; `JReFrameworker` &gt; `JReFrameworker Runtime Project`.
 
 {: style="text-align: center"}
-![New Module](../images/hidden_file/NewProject.png)
+![New Module](../images/hidden-file/NewProject.png)
 
 Enter a new project name for the module.
 
 {: style="text-align: center"}
-![Module Name](../images/hidden_file/NewProjectName.png)
+![Module Name](../images/hidden-file/NewProjectName.png)
 
 ## Adding Test Logic
 
@@ -44,7 +44,7 @@ Next let's add some test code that will interact with the `java.io.File` API so 
 	}
 	
 {: style="text-align: center"}
-![Test Logic](../images/hidden_file/TestLogic.png)
+![Test Logic](../images/hidden-file/TestLogic.png)
 
 In an unmodified runtime, the print out should return "true" assuming the file could be written.  In the event that a file could not be written an exception will be thrown causing stack trace to be written to the output.
 
@@ -57,17 +57,17 @@ Let's prototype a class that has the behavior we intend to modify the runtime wi
 In this tutorial we will use the Eclipse New Class Wizard to create a subclass of `java.io.File`.  We create a class named `HiddenFile` that extends `java.io.File` in the package `java.io`.
 
 {: style="text-align: center"}
-![New Class Wizard](../images/hidden_file/NewClassWizard.png)
+![New Class Wizard](../images/hidden-file/NewClassWizard.png)
 
 Now because the `File` class does not have a default constructor, creating a subclass of `File` causes a compile error if we do not also create a `HiddenFile` constructor.  
 
 {: style="text-align: center"}
-![Compile Error](../images/hidden_file/CompileError.png)
+![Compile Error](../images/hidden-file/CompileError.png)
 
 In this tutorial we use Eclipse to resolve the compile error by generating a `HiddenFile` constructor.  Optionally, we can also use Eclipse to resolve the warning that `HiddenFile` does not declare a `serialVersionUID` field.
 
 {: style="text-align: center"}
-![Successful Compile](../images/hidden_file/SuccessfulCompile.png)
+![Successful Compile](../images/hidden-file/SuccessfulCompile.png)
 
 Now that we have created a subclass of `java.io.File` we can override the behavior of the `File.exists()` method with our desired functionality. First we can leverage the inherited `File.isFile()` and `File.getName()` methods to check if the `File` object is a file (and not a directory) and that the filename matches "secretFile".  If both conditions are true we can immediately return false.  Since we wish for the functionality of `HiddenFile.exists()` to behave normally in all other cases we can simply call `File.exists()` using the [super keyword](https://docs.oracle.com/javase/tutorial/java/IandI/super.html) to access the parent's method implementation.  After making these modifications we arrive at the following implementation for the `HiddenFile` class.
 
@@ -193,12 +193,12 @@ The modified version of the runtime library is placed in the `runtimes` director
 Inspecting the modified version of `java.io.File` shows that the original `File.exists()` method was renamed to `jref_exists()` and made private as shown in the figure below. Note that the prefix used to renamed methods can be edited by changing the JReFrameworker preferences under `Eclipse` &gt; `Preferences...` (or `Window` &gt; `Preferences...`) &gt; `JReFrameworker`.
 
 {: style="text-align: center"}
-![Decompiled Original Method](../images/hidden_file/OriginalMethod.png)
+![Decompiled Original Method](../images/hidden-file/OriginalMethod.png)
 
 Inspecting the new version of `java.io.File` reveals that the new `File.exists()` method first calls `File.isFile()` and then `File.getName()` to check if the `File` is a file (and not a directory) and that the filename equals "secretFile".  If both conditions are true, then the boolean value of false is returned immediately. Otherwise the value of `File.jref_exists()` is returned.
 
 {: style="text-align: center"}
-![Decompiled New Method](../images/hidden_file/NewMethod.png)
+![Decompiled New Method](../images/hidden-file/NewMethod.png)
 
 Note that if we inspect at the bytecode level, we would find that special invocations through *super* calls are replaced with dynamic invocations and all instruction owners have been remapped from the subclass type to the base class type where applicable. 
 
@@ -226,7 +226,7 @@ Before we begin testing, we should remember to revert our test logic back to the
 Now that our test logic is using whatever implementation of `java.io.File` exists in the runtime environment we can run it again as a standard Java application.  It should return true as is the normal expectation of the runtime. To run `Test` again with the modified runtime use the JReFrameworker *Run* or *Debug* launch profile as shown in the image below.
 
 {: style="text-align: center"}
-![Run Configuration](../images/hidden_file/RunConfiguration.png)
+![Run Configuration](../images/hidden-file/RunConfiguration.png)
 
 Running with either of these launch profiles runs `Test` in the modified runtime (located at `<project>/runtimes/rt.jar`).  If everything was done correctly, the test program should return false! We will cover the steps to deploy the module's bytecode manipulations on a victims machine in a later step.
 
