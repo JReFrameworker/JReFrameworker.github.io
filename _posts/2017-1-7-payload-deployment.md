@@ -52,7 +52,7 @@ Since we already know the credentials for the victim machine, we will be using M
 
 <p>
   <center>
-    <a href="../images/payload-deployment/msfconsole-zoom.png" data-lightbox="kali-network" data-title="msfconsole">
+    <a href="../images/payload-deployment/msfconsole-zoom.png" data-lightbox="msfconsole" data-title="Open msfconsole">
       <img src="../images/payload-deployment/msfconsole.png" alt="Open msfconsole" />
       <figcaption>Open msfconsole (click to zoom)</figcaption>
     </a>
@@ -63,7 +63,7 @@ Within the Metasploit framework console, load the psexec exploit module by typin
 
 <p>
   <center>
-    <a href="../images/payload-deployment/load-exploit-zoom.png" data-lightbox="kali-network" data-title="load-exploit">
+    <a href="../images/payload-deployment/load-exploit-zoom.png" data-lightbox="load-exploit" data-title="Load Exploit">
       <img src="../images/payload-deployment/load-exploit.png" alt="Load Exploit" />
       <figcaption>Load exploit (click to zoom)</figcaption>
     </a>
@@ -74,7 +74,7 @@ Type `show options` to view the exploit configuration parameters.
 
 <p>
   <center>
-    <a href="../images/payload-deployment/exploit-options-zoom.png" data-lightbox="kali-network" data-title="exploit-options">
+    <a href="../images/payload-deployment/exploit-options-zoom.png" data-lightbox="exploit-options" data-title="Exploit Options">
       <img src="../images/payload-deployment/exploit-options.png" alt="Exploit Options" />
       <figcaption>Exploit Options (click to zoom)</figcaption>
     </a>
@@ -95,7 +95,7 @@ Set the outbound Meterpreter connection port to be port 443 (https) by typing `s
 
 <p>
   <center>
-    <a href="../images/payload-deployment/exploit-parameters-zoom.png" data-lightbox="kali-network" data-title="exploit-parameters">
+    <a href="../images/payload-deployment/exploit-parameters-zoom.png" data-lightbox="kali-network" data-title="Set Exploit Parameters">
       <img src="../images/payload-deployment/exploit-parameters.png" alt="Set Exploit Parameters" />
       <figcaption>Set Exploit Parameters (click to zoom)</figcaption>
     </a>
