@@ -95,7 +95,7 @@ Set the outbound Meterpreter connection port to be port 443 (https) by typing `s
 
 <p>
   <center>
-    <a href="../images/payload-deployment/exploit-parameters-zoom.png" data-lightbox="kali-network" data-title="Set Exploit Parameters">
+    <a href="../images/payload-deployment/exploit-parameters-zoom.png" data-lightbox="exploit-parameters" data-title="Set Exploit Parameters">
       <img src="../images/payload-deployment/exploit-parameters.png" alt="Set Exploit Parameters" />
       <figcaption>Set Exploit Parameters (click to zoom)</figcaption>
     </a>
@@ -104,13 +104,57 @@ Set the outbound Meterpreter connection port to be port 443 (https) by typing `s
 
 Finally run the exploit by typing `exploit`.
 
-If the exploit failed with error code `STATUS_ACCESS_DENIED (Command=117 WordCount=0)` you may need to edit a registry setting on the Window's victim. Using Window's *regedit* tool navigate to the registry key, **"HKEY\_LOCAL\_MACHINE\System\CurrentControlSet\Services\LanManServer\Parameters"** on the target systems and setting the value of **"RequireSecuritySignature"** to **"0"**. Note that while some registry keys may be case sensitive, these keys do not appear to be case sensitive. This registry edit disables the group policy requirement that communications must be digitally signed. 
+If the exploit failed with error code `STATUS_ACCESS_DENIED (Command=117 WordCount=0)` you may need to edit a registry setting on the Window's victim. 
+
+<p>
+  <center>
+    <a href="../images/payload-deployment/exploit-failure-zoom.png" data-lightbox="exploit-failure" data-title="Exploit Failure">
+      <img src="../images/payload-deployment/exploit-failure.png" alt="Exploit Failure" />
+      <figcaption>Exploit Failure (click to zoom)</figcaption>
+    </a>
+  </center>
+</p>
+
+Open Window's *regedit* tool.
+
+<p>
+  <center>
+    <img src="../images/payload-deployment/regedit.png" alt="Open RegEdit" />
+  </center>
+</p>
+
+Navigate to the registry key, **"HKEY\_LOCAL\_MACHINE\System\CurrentControlSet\Services\LanManServer\Parameters"** on the target systems and setting the value of **"RequireSecuritySignature"** to **"0"**. Note that while some registry keys may be case sensitive, these keys do not appear to be case sensitive. This registry edit disables the group policy requirement that communications must be digitally signed. 
+
+<p>
+  <center>
+    <a href="../images/payload-deployment/reg1-zoom.png" data-lightbox="reg-1" data-title="Registry Edit RequireSecuritySignature">
+      <img src="../images/payload-deployment/reg1.png" alt="Registry Edit RequireSecuritySignature" />
+      <figcaption>Registry Edit RequireSecuritySignature (click to zoom)</figcaption>
+    </a>
+  </center>
+</p>
 
 You may also need to add a new registry key under **"HKEY\_LOCAL\_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System"**. Setting  the key to be a DWORD (32-bit) named **"LocalAccountTokenFilterPolicy"** with a value of **"1"**. This edit allows local users to perform administrative actions.
 
-After setting the registry keys, rerun the exploit in Kali. If you are still not successful, try restarting the Windows machine and double checking your exploit configuration parameters by typing `set` to view the current values.
+<p>
+  <center>
+    <a href="../images/payload-deployment/reg2-zoom.png" data-lightbox="reg-2" data-title="Registry Edit LocalAccountTokenFilterPolicy">
+      <img src="../images/payload-deployment/reg2.png" alt="Registry Edit LocalAccountTokenFilterPolicy" />
+      <figcaption>Registry Edit LocalAccountTokenFilterPolicy (click to zoom)</figcaption>
+    </a>
+  </center>
+</p>
 
-If the exploit was successful you will see that one new session was created. 
+After setting the registry keys, rerun the exploit in Kali. If you are still not successful, try restarting the Windows machine and double checking your exploit configuration parameters by typing `set` to view the current values. If the exploit was successful you will see that one new session was created. 
+
+<p>
+  <center>
+    <a href="../images/payload-deployment/exploit-success-zoom.png" data-lightbox="exploit-success" data-title="Exploit Success">
+      <img src="../images/payload-deployment/exploit-success.png" alt="Exploit Success" />
+      <figcaption>Exploit Success (click to zoom)</figcaption>
+    </a>
+  </center>
+</p>
 
 <a name="PostExploitation"></a>
 
