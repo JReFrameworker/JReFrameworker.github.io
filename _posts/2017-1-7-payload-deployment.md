@@ -24,21 +24,23 @@ Our victim machine was created with an Administrator account named "Victim" and 
 
 After installing Java, we set out virtual machines to "Host only" mode with our victim at `192.168.115.129` and our attacker at `192.168.115.128`. Double check that you know the IP addresses of each machine and that each machine can ping the other. If Kali cannot ping the Windows virtual machine, you may need to disable or specifically allow connections through the Windows firewall.
 
-<center>
-  <a href="../images/payload-deployment/windows-network-zoom.png" data-lightbox="windows-network" data-title="Windows Network">
-    <img src="../images/payload-deployment/windows-network.png" alt="Windows Network" />
-    <figcaption>Windows Network (click to zoom)</figcaption>
-  </a>
-</center>
+<p>
+  <center>
+    <a href="../images/payload-deployment/windows-network-zoom.png" data-lightbox="windows-network" data-title="Windows Network">
+      <img src="../images/payload-deployment/windows-network.png" alt="Windows Network" />
+      <figcaption>Windows Network (click to zoom)</figcaption>
+    </a>
+  </center>
+</p>
 
-<br />
-
-<center>
-  <a href="../images/payload-deployment/kali-network-zoom.png" data-lightbox="kali-network" data-title="Kali Network">
-    <img src="../images/payload-deployment/kali-network.png" alt="Kali Network" />
-    <figcaption>Kali Network (click to zoom)</figcaption>
-  </a>
-</center>
+<p>
+  <center>
+    <a href="../images/payload-deployment/kali-network-zoom.png" data-lightbox="kali-network" data-title="Kali Network">
+      <img src="../images/payload-deployment/kali-network.png" alt="Kali Network" />
+      <figcaption>Kali Network (click to zoom)</figcaption>
+    </a>
+  </center>
+</p>
 
 The next section continues the lab setup towards getting an active [Metasploit Meterpreter](https://www.offensive-security.com/metasploit-unleashed/about-meterpreter/) session on the victim machine. If your lab setup is different and you have a working exploit already, skip to the [Post Exploitation](#PostExploitation) section below.
 
