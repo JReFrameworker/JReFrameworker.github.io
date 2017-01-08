@@ -8,6 +8,10 @@ This tutorial demonstrates how to modify a victim machine's runtime using a JReF
 
 If you haven't already, you should complete the first two tutorials ([Hello World](./hello-world) and [Hidden File](./hidden-file)) to become familiar with the basics of JReFrameworker.
 
+The video below shows a quick demo of what this tutorial will accomplish (deploying the Hello World payload on a victim machine).
+
+<center><iframe width="560" height="315" src="//www.youtube.com/embed/ZVli0XJJR5s" frameborder="0" allowfullscreen></iframe></center>
+
 <a name="Setup"></a>
 
 ## Lab Setup
