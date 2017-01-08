@@ -31,6 +31,8 @@ After installing Java, we set out virtual machines to "Host only" mode with our 
   </a>
 </center>
 
+<br />
+
 <center>
   <a href="../images/payload-deployment/kali-network-zoom.png" data-lightbox="kali-network" data-title="Kali Network">
     <img src="../images/payload-deployment/kali-network.png" alt="Kali Network" />
