@@ -201,7 +201,7 @@ At the root Metasploit console type `reload_all` to detect the newly added modul
   </center>
 </p>
 
-For this tutorial we will be using the Hello World JReFrameworker module discussed in [the first tutorial](/hello-world/). In the host machine, open the *Hello World* Eclipse project and do a clean build to ensure you have the latest compiled code (navigate to `Project` &gt; `Clean...`). Next navigate to `File` &gt; `Export` &gt; `Other...` &gt; `JReFrameworker Payload Droper`. 
+For this tutorial we will be using the Hello World JReFrameworker module discussed in [the first tutorial](/hello-world/). In the host machine, open the *HelloWorld* Eclipse project and do a clean build to ensure you have the latest compiled code (navigate to `Project` &gt; `Clean...`). Next navigate to `File` &gt; `Export` &gt; `Other...` &gt; `JReFrameworker Payload Droper`. 
 
 <p>
   <center>
@@ -210,7 +210,7 @@ For this tutorial we will be using the Hello World JReFrameworker module discuss
   </center>
 </p>
 
-In the export dialog select the `Hello World` project and press `Next`.
+In the export dialog select the `HelloWorld` project and press `Next`.
 
 <p>
   <center>
