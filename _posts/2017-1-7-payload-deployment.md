@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Payload Deployment
-draft: true
+draft: false
 ---
 
 This tutorial demonstrates how to modify a victim machine's runtime using a JReFrameworker module.
@@ -127,9 +127,9 @@ Navigate to the registry key, **"HKEY\_LOCAL\_MACHINE\System\CurrentControlSet\S
 
 <p>
   <center>
-    <a href="../images/payload-deployment/reg1-zoom.png" data-lightbox="reg-1" data-title="Registry Edit RequireSecuritySignature">
-      <img src="../images/payload-deployment/reg1.png" alt="Registry Edit RequireSecuritySignature" />
-      <figcaption>Registry Edit RequireSecuritySignature (click to zoom)</figcaption>
+    <a href="../images/payload-deployment/reg1-zoom.png" data-lightbox="reg-1" data-title="Registry Edit: RequireSecuritySignature">
+      <img src="../images/payload-deployment/reg1.png" alt="Registry Edit: RequireSecuritySignature" />
+      <figcaption>Registry Edit: RequireSecuritySignature (click to zoom)</figcaption>
     </a>
   </center>
 </p>
@@ -138,9 +138,9 @@ You may also need to add a new registry key under **"HKEY\_LOCAL\_MACHINE\SOFTWA
 
 <p>
   <center>
-    <a href="../images/payload-deployment/reg2-zoom.png" data-lightbox="reg-2" data-title="Registry Edit LocalAccountTokenFilterPolicy">
-      <img src="../images/payload-deployment/reg2.png" alt="Registry Edit LocalAccountTokenFilterPolicy" />
-      <figcaption>Registry Edit LocalAccountTokenFilterPolicy (click to zoom)</figcaption>
+    <a href="../images/payload-deployment/reg2-zoom.png" data-lightbox="reg-2" data-title="Registry Edit: LocalAccountTokenFilterPolicy">
+      <img src="../images/payload-deployment/reg2.png" alt="Registry Edit: LocalAccountTokenFilterPolicy" />
+      <figcaption>Registry Edit: LocalAccountTokenFilterPolicy (click to zoom)</figcaption>
     </a>
   </center>
 </p>
@@ -201,24 +201,64 @@ At the root Metasploit console type `reload_all` to detect the newly added modul
   </center>
 </p>
 
-Load the JReFrameworker post module by typing `use post/manage/java/jreframeworker`. Note that the module path may be different if you decided to change the directory path in the previous step.
+For this tutorial we will be using the Hello World JReFrameworker module discussed in [the first tutorial](/hello-world/). In the host machine, open the *Hello World* Eclipse project and do a clean build to ensure you have the latest compiled code (navigate to `Project` &gt; `Clean...`). Next navigate to `File` &gt; `Export` &gt; `Other...` &gt; `JReFrameworker Payload Droper`. 
+
+<p>
+  <center>
+    <img src="../images/payload-deployment/export1.png" alt="Exporting Payload Droper (step 1)" />
+    <figcaption>Exporting Payload Droper (step 1)</figcaption>
+  </center>
+</p>
+
+In the export dialog select the `Hello World` project and press `Next`.
+
+<p>
+  <center>
+    <img src="../images/payload-deployment/export2.png" alt="Exporting Payload Droper (step 2)" />
+    <figcaption>Exporting Payload Droper (step 2)</figcaption>
+  </center>
+</p>
+
+Select the output path to save the payload dropper and press the `Finish` button.
+
+<p>
+  <center>
+    <img src="../images/payload-deployment/export3.png" alt="Exporting Payload Droper (step 3)" />
+    <figcaption>Exporting Payload Droper (step 3)</figcaption>
+  </center>
+</p>
+
+Copy the payload dropper into the Kali attacker machine.
+
+At the root Metasploit console, load the JReFrameworker post module by typing `use post/manage/java/jreframeworker`. Note that the module path may be different if you decided to change the directory path in the previous step.
 
 Type `show options` to view the basic JReFrameworker module options. Type `show advanced options` to show additional module options.
 
 Type `set PAYLOAD_DROPPER /root/Desktop/hello-world-dropper.jar` to set the JReFrameworker payload to the *hello-world-dropper.jar* module we exported from JReFrameworker earlier.
 
-Type `set SESSION 1` to set the post module to run on the Meterpreter session 1. Note that your session number may be different. Use `sessions -l` to list the current sessions.
+Type `set SESSION 1` to set the post module to run on the Meterpreter session 1. Remember that your session number may be different.
 
 <p>
   <center>
-    <a href="../images/payload-deployment/jreframeworker-options-zoom.png" data-lightbox="configuring-module" data-title="Configuring JReFrameworker Module">
-      <img src="../images/payload-deployment/jreframeworker-options.png" alt="Configuring JReFrameworker Module" />
-      <figcaption>Configuring JReFrameworker Module (click to zoom)</figcaption>
+    <a href="../images/payload-deployment/jreframeworker-options-zoom.png" data-lightbox="configuring-module" data-title="Configuring JReFrameworker Post Module">
+      <img src="../images/payload-deployment/jreframeworker-options.png" alt="Configuring JReFrameworker Post Module" />
+      <figcaption>Configuring JReFrameworker Post Module (click to zoom)</figcaption>
     </a>
   </center>
 </p>
 
-Type `run` to execute the post module.
+Now before we run the post module, it might be a good idea to take a snapshot of our victim machine in case you want to restore it later. Let's also take this opportunity to run a simple Hello World program on the victim machine and confirm that the Java runtime is working properly before it is modified.
+
+<p>
+  <center>
+    <a href="../images/payload-deployment/before-modification-zoom.png" data-lightbox="before-modification" data-title="Before JReFrameworker Modification">
+      <img src="../images/payload-deployment/before-modification.png" alt="Before JReFrameworker Modification" />
+      <figcaption>Before JReFrameworker Modification (click to zoom)</figcaption>
+    </a>
+  </center>
+</p>
+
+If everything is working as expected, type `run` to execute the post module.
 
 <p>
   <center>
@@ -228,3 +268,16 @@ Type `run` to execute the post module.
     </a>
   </center>
 </p>
+
+Finally inspect the behavior of the victim machine when the same Hello World program is exectuted again (now in the modified runtime). You should see that the message is printed backwards!
+
+<p>
+  <center>
+    <a href="../images/payload-deployment/after-modification-zoom.png" data-lightbox="after-modification" data-title="After JReFrameworker Modification">
+      <img src="../images/payload-deployment/after-modification.png" alt="After JReFrameworker Modification" />
+      <figcaption>After JReFrameworker Modification (click to zoom)</figcaption>
+    </a>
+  </center>
+</p>
+
+Now it's up to you to experiment with other payloads. Just remember that the payload dropper is itself written in Java and executes on the victims runtime. If you have modified the runtime already future modifications may become unpredictable, so you might consider restoring the snapshot of the victim virtual machine before going any further. Good luck!
