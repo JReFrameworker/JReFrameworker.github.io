@@ -214,7 +214,7 @@ For this tutorial we will be using the Hello World JReFrameworker module discuss
   </center>
 </p>
 
-In the export dialog select the `HelloWorld` project and press `Next`.
+In the export dialog select the *HelloWorld* project and press `Next`.
 
 <p>
   <center>
