@@ -27,8 +27,8 @@ After installing Java, we set out virtual machines to `Host only` mode with our 
 <p>
   <center>
     <a href="../images/payload-deployment/windows-network-zoom.png" data-lightbox="windows-network" data-title="Windows Network">
-      <img src="../images/payload-deployment/windows-network.png" alt="Windows Network" />
-      <figcaption>Windows (Victim) Network (click to zoom)</figcaption>
+      <img src="../images/payload-deployment/windows-network.png" alt="Windows Victim Network" />
+      <figcaption>Windows Victim Network (click to zoom)</figcaption>
     </a>
   </center>
 </p>
@@ -36,8 +36,8 @@ After installing Java, we set out virtual machines to `Host only` mode with our 
 <p>
   <center>
     <a href="../images/payload-deployment/kali-network-zoom.png" data-lightbox="kali-network" data-title="Kali Network">
-      <img src="../images/payload-deployment/kali-network.png" alt="Kali Network" />
-      <figcaption>Kali (Attacker) Network (click to zoom)</figcaption>
+      <img src="../images/payload-deployment/kali-network.png" alt="Kali Attacker Network" />
+      <figcaption>Kali Attacker Network (click to zoom)</figcaption>
     </a>
   </center>
 </p>
