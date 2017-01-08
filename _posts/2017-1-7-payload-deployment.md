@@ -166,13 +166,40 @@ When you are done, type `background` to exit and background the Meterpreter sess
 
 Now that we have an active Meterpreter session on our victim machine we can use JReFrameworker to manipulate the runtime or install a managed code rootkit. First determine the active Meterpreter sessions that you have by typing `sessions -l` to list the current sessions.
 
+<p>
+  <center>
+    <a href="../images/payload-deployment/list-sessions-zoom.png" data-lightbox="list-sessions" data-title="List Sessions">
+      <img src="../images/payload-deployment/list-sessions.png" alt="List Sessions" />
+      <figcaption>List Sessions (click to zoom)</figcaption>
+    </a>
+  </center>
+</p>
+
 Since most typical Java runtime installations are installed in a directory that requires root or Administrator privileges you may need to escalate your privileges depending on your current access level.  To begin interacting with the session of the victim machine, type `sessions -i 1` (replacing 1 with your desired session). Type `getsystem` to attempt standard privilege escalation techniques.
+
+<p>
+  <center>
+    <a href="../images/payload-deployment/privilege-escalation-zoom.png" data-lightbox="privilege-escalation" data-title="Privilege Escalation">
+      <img src="../images/payload-deployment/privilege-escalation.png" alt="Privilege Escalation" />
+      <figcaption>Privilege Escalation (click to zoom)</figcaption>
+    </a>
+  </center>
+</p>
 
 Once you have system level privileges (assuming you need them), type `background` to exit and background the Meterpreter session.
 
 Next download a copy of the current [jreframeworker.rb](https://github.com/JReFrameworker/JReFrameworker/blob/master/metasploit/jreframeworker.rb) Metasploit module. Then run `mkdir -p ~/.msf4/modules/post/manage/java` to create a directory path for the custom module. Add the *jreframeworker.rb* module to the newly created directory. Note that the module must end with the Ruby *.rb* extension. Additional information on loading custom Metasploit modules can be found on the [Metasploit Wiki](https://github.com/rapid7/metasploit-framework/wiki/Loading-External-Modules).
 
 At the root Metasploit console type `reload_all` to detect the newly added module.
+
+<p>
+  <center>
+    <a href="../images/payload-deployment/adding-module-zoom.png" data-lightbox="adding-module" data-title="Adding JReFrameworker Module">
+      <img src="../images/payload-deployment/adding-module.png" alt="Adding JReFrameworker Module" />
+      <figcaption>Adding JReFrameworker Module (click to zoom)</figcaption>
+    </a>
+  </center>
+</p>
 
 Load the JReFrameworker post module by typing `use post/manage/java/jreframeworker`. Note that the module path may be different if you decided to change the directory path in the previous step.
 
@@ -182,4 +209,22 @@ Type `set PAYLOAD_DROPPER /root/Desktop/hello-world-dropper.jar` to set the JReF
 
 Type `set SESSION 1` to set the post module to run on the Meterpreter session 1. Note that your session number may be different. Use `sessions -l` to list the current sessions.
 
+<p>
+  <center>
+    <a href="../images/payload-deployment/jreframeworker-options-zoom.png" data-lightbox="configuring-module" data-title="Configuring JReFrameworker Module">
+      <img src="../images/payload-deployment/jreframeworker-options.png" alt="Configuring JReFrameworker Module" />
+      <figcaption>Configuring JReFrameworker Module (click to zoom)</figcaption>
+    </a>
+  </center>
+</p>
+
 Type `run` to execute the post module.
+
+<p>
+  <center>
+    <a href="../images/payload-deployment/post-exploitation-zoom.png" data-lightbox="post-exploitation" data-title="Post Exploitation">
+      <img src="../images/payload-deployment/post-exploitation.png" alt="Post Exploitation" />
+      <figcaption>Post Exploitation (click to zoom)</figcaption>
+    </a>
+  </center>
+</p>
