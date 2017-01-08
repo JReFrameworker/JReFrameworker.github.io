@@ -18,17 +18,23 @@ You will also need to setup a small laboratory test environment that includes th
 2. An attacker machine with [Metasploit](https://www.metasploit.com/) installed (this tutorial uses a [Kali Linux virtual machine](https://www.offensive-security.com/kali-linux-vmware-virtualbox-image-download/) version 2016.2).
 3. An installation of JReFrameworker (this tutorial uses the host machine, but any OS that can run [Eclipse](https://eclipse.org/) with JReFrameworker installed will work).
 
-For this tutorial we will be using [VMWare](https://www.vmware.com) virtual machines with our victim at `192.168.1.2` and our attacker at `192.168.1.3`. [Virtualbox](https://www.virtualbox.org) is a good free alternative to VMWare.
+For this tutorial we will be using [VMWare](https://www.vmware.com) virtual machines in "Host only" mode with our victim at `192.168.115.129` and our attacker at `192.168.115.128`. [Virtualbox](https://www.virtualbox.org) is a good free alternative to VMWare.
 
-Our victim machine was created with an Administrator account named "Victim" and password "badpass". Since Java is not installed by default, we will need to install the runtime environment. Log into the machine. Using the [ninite.com](https://ninite.com/) installer is an easy way to install the latest version of Java (in this case Java 8) as well as a few other tools that might come in handy later (7-Zip and Notepad++). Optionally you might also want to show file extensions and unhide hidden files. Navigate to the Start button and type "folder options" in the search bar. Under view select "Show hidden files, folders, and drives" and uncheck "Hide extensions for know file types".
+Our victim machine was created with an Administrator account named "Victim" and password "badpass". Log into the machine. Since Java is not installed by default, we will need to install the runtime environment. You can download the standard edition of Java directly from [Oracle](http://www.oracle.com/technetwork/java/javase/downloads/index.html) or by using the [ninite.com](https://ninite.com/) installer.
 
-![Windows Folder Options](../images/payload-deployment/folder-options.png)
+Double check that you know your machine IP addresses and each machine can ping the other. If Kali cannot ping the Windows virtual machine, you may need to disable or allow connections through the Windows firewall.
+
+![Windows Network](../images/payload-deployment/windows-network.png)
+
+![Kali Network](../images/payload-deployment/kali-network.png)
 
 The next section continues the lab setup to get an active [Metasploit Meterpreter](https://www.offensive-security.com/metasploit-unleashed/about-meterpreter/) session on the victim machine. If your lab setup is different and you have a working exploit already, skip to the [Post Exploitation](#PostExploitation) section below.
 
 <a name="Exploitation"></a>
 
 ## Exploitation
+
+Since we already know the credentials for 
 
 <a name="PostExploitation"></a>
 
