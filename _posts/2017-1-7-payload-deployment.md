@@ -18,17 +18,17 @@ You will also need to setup a small laboratory test environment that includes th
 2. An attacker machine with [Metasploit](https://www.metasploit.com/) installed (this tutorial uses a [Kali Linux virtual machine](https://www.offensive-security.com/kali-linux-vmware-virtualbox-image-download/) version 2016.2).
 3. An installation of JReFrameworker (this tutorial uses the host machine, but any OS that can run [Eclipse](https://eclipse.org/) with JReFrameworker installed will work).
 
-For this tutorial we will be using [VMWare](https://www.vmware.com) virtual machines in "Host only" mode with our victim at `192.168.115.129` and our attacker at `192.168.115.128`. [Virtualbox](https://www.virtualbox.org) is a good free alternative to VMWare.
+For this tutorial we will be using [VMWare](https://www.vmware.com) virtual machines, but [Virtualbox](https://www.virtualbox.org) is a good free alternative to VMWare.
 
-Our victim machine was created with an Administrator account named "Victim" and password "badpass". Log into the machine. Since Java is not installed by default, we will need to install the runtime environment. You can download the standard edition of Java directly from [Oracle](http://www.oracle.com/technetwork/java/javase/downloads/index.html) or by using the [ninite.com](https://ninite.com/) installer.
+Our victim machine was created with an Administrator account named "Victim" and password "badpass". Log into the machine. Since Java is not installed by default, we will need to install the runtime environment. You can download the standard edition of Java directly from [Oracle](http://www.oracle.com/technetwork/java/javase/downloads/index.html) or by using the [ninite.com](https://ninite.com/) installer. 
 
-Double check that you know your machine IP addresses and each machine can ping the other. If Kali cannot ping the Windows virtual machine, you may need to disable or allow connections through the Windows firewall.
+After installing Java, we set out virtual machines to "Host only" mode with our victim at `192.168.115.129` and our attacker at `192.168.115.128`. Double check that you know the IP addresses of each machine and that each machine can ping the other. If Kali cannot ping the Windows virtual machine, you may need to disable or specifically allow connections through the Windows firewall.
 
 ![Windows Network](../images/payload-deployment/windows-network.png)
 
 ![Kali Network](../images/payload-deployment/kali-network.png)
 
-The next section continues the lab setup to get an active [Metasploit Meterpreter](https://www.offensive-security.com/metasploit-unleashed/about-meterpreter/) session on the victim machine. If your lab setup is different and you have a working exploit already, skip to the [Post Exploitation](#PostExploitation) section below.
+The next section continues the lab setup towards getting an active [Metasploit Meterpreter](https://www.offensive-security.com/metasploit-unleashed/about-meterpreter/) session on the victim machine. If your lab setup is different and you have a working exploit already, skip to the [Post Exploitation](#PostExploitation) section below.
 
 <a name="Exploitation"></a>
 
