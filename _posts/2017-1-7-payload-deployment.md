@@ -205,12 +205,12 @@ At the root Metasploit console type `reload_all` to detect the newly added modul
   </center>
 </p>
 
-For this tutorial we will be using the Hello World JReFrameworker module discussed in [the first tutorial](/hello-world/). In the host machine, open the *HelloWorld* Eclipse project and do a clean build to ensure you have the latest compiled code (navigate to `Project` &gt; `Clean...`). Next navigate to `File` &gt; `Export` &gt; `Other...` &gt; `JReFrameworker Payload Droper`. 
+For this tutorial we will be using the Hello World JReFrameworker module discussed in [the first tutorial](/hello-world/). In the host machine, open the *HelloWorld* Eclipse project and do a clean build to ensure you have the latest compiled code (navigate to `Project` &gt; `Clean...`). Next navigate to `File` &gt; `Export` &gt; `Other...` &gt; `JReFrameworker Payload Dropper`. 
 
 <p>
   <center>
-    <img src="../images/payload-deployment/export1.png" alt="Exporting Payload Droper (step 1)" />
-    <figcaption>Exporting Payload Droper (step 1)</figcaption>
+    <img src="../images/payload-deployment/export1.png" alt="Exporting Payload Dropper (step 1)" />
+    <figcaption>Exporting Payload Dropper (step 1)</figcaption>
   </center>
 </p>
 
@@ -218,8 +218,8 @@ In the export dialog select the *HelloWorld* project and press `Next`.
 
 <p>
   <center>
-    <img src="../images/payload-deployment/export2.png" alt="Exporting Payload Droper (step 2)" />
-    <figcaption>Exporting Payload Droper (step 2)</figcaption>
+    <img src="../images/payload-deployment/export2.png" alt="Exporting Payload Dropper (step 2)" />
+    <figcaption>Exporting Payload Dropper (step 2)</figcaption>
   </center>
 </p>
 
@@ -227,8 +227,8 @@ Select the output path to save the payload dropper and press the `Finish` button
 
 <p>
   <center>
-    <img src="../images/payload-deployment/export3.png" alt="Exporting Payload Droper (step 3)" />
-    <figcaption>Exporting Payload Droper (step 3)</figcaption>
+    <img src="../images/payload-deployment/export3.png" alt="Exporting Payload Dropper (step 3)" />
+    <figcaption>Exporting Payload Dropper (step 3)</figcaption>
   </center>
 </p>
 
@@ -273,7 +273,7 @@ If everything is working as expected, type `run` to execute the post module.
   </center>
 </p>
 
-Finally inspect the behavior of the victim machine when the same Hello World program is exectuted again (now in the modified runtime). You should see that the message is printed backwards!
+Finally inspect the behavior of the victim machine when the same Hello World program is executed again (now in the modified runtime). You should see that the message is printed backwards!
 
 <p>
   <center>
