@@ -7,7 +7,7 @@ layout: default
 ## JReFrameworker
 This project aims to extend previous works by [Erez Metula](https://appsec-labs.com/managed_code_rootkits) by introducing JReFrameworker, a tool to produce MCR capabilities aimed at the Java Runtime Environment in a user-friendly way. 
 
-JReFrameworker is a tool that allows a user to write annotated Java source that is automatically merged or inserted into the runtime.  The framework supports developing and debugging attack modules directly in the Eclipse IDE. Working at the intended abstraction level of source code allows the attacker to "write once, exploit anywhere".
+JReFrameworker is a bytecode manipulation tool that allows a user to write annotated Java source that is automatically merged or inserted into the runtime.  The framework supports developing and debugging attack modules directly in the Eclipse IDE. Working at the intended abstraction level of source code allows the attacker to "write once, exploit anywhere".
 
 ## Getting Started
 Ready to get started?
