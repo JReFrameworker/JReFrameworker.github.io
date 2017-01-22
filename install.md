@@ -22,6 +22,12 @@ If you want to install from source for bleeding edge changes, first grab a copy 
 
 ## Changelog
 
+### 1.3.0
+- Updated dependencies
+- Re-organized pacakges
+- Migrated to Java 8
+- Bumped major version and updated copyright information
+
 ### 1.2.0
 - DEFCON 24 release, migrated to Eclipse Neon
 - Support for advanced annotation features to configure finality and visibility (helpful for manipulating private final implementations)
