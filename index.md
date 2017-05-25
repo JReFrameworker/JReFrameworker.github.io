@@ -14,6 +14,7 @@ Ready to get started?
 
 1. First [install](/install) the JReFrameworker plugin.
 2. Then check out the provided [tutorials](/tutorials) to get started hacking your first attack module.
+3. Start a discussion on Gitter. [![Join the chat at https://gitter.im/JReFrameworker](https://badges.gitter.im/JReFrameworker.svg)](https://gitter.im/JReFrameworker/support)
 
 ## Materials
 This tool was presented at [DEFCON 24](https://www.defcon.org/html/defcon-24/dc-24-speakers.html#Holland). Thanks to all those that attended! The JReFrameworker modules developed for the presentation are available in the [github.com/JReFrameworker/modules](https://github.com/JReFrameworker/modules) repository.
