@@ -285,3 +285,9 @@ Finally inspect the behavior of the victim machine when the same Hello World pro
 </p>
 
 Now it's up to you to experiment with other payloads. Just remember that the payload dropper is itself written in Java and executes on the victims runtime. If you have modified the runtime already future modifications may become unpredictable, so you might consider restoring the snapshot of the victim virtual machine before going any further. Good luck!
+
+## Additional Notes
+
+The payload dropper supports several additional options, which may be useful when deploying payloads.
+
+{% gist 2ee7bd890401c5381ef80795b2943766 %}
