@@ -22,19 +22,20 @@ If you want to install from source for bleeding edge changes, first grab a copy 
 
 ## Changelog
 
-### 1.3.0
+### 1.3.0 (Derbycon 7 Release)
+- Migrated to Eclipse Oxygen
 - Incremental Builder
 - Finality and visibility annotations
 - Atlas integrations with JavaPoet source code generation
-- Improvements to dropper
+- Improvements to dropper functionalities
 - Support for runtime and application manipulations
-- Updated dependencies
-- Re-organized packages
-- Migrated to Java 8
+- Updated dependencies, migrated to Java 8
+- Re-organized packages, broke up dependencies, major code refactoring
 - Bumped major version and updated copyright information
+- Tons of bug fixes and probably a decent amount of new bugs to fix later
 
-### 1.2.0
-- DEFCON 24 release, migrated to Eclipse Neon
+### 1.2.0 (DEFCON 24 Release)
+- Migrated to Eclipse Neon
 - Support for advanced annotation features to configure finality and visibility (helpful for manipulating private final implementations)
 - Multiple bug and stability fixes
 
