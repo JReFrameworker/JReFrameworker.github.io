@@ -23,8 +23,13 @@ If you want to install from source for bleeding edge changes, first grab a copy 
 ## Changelog
 
 ### 1.3.0
+- Incremental Builder
+- Finality and visibility annotations
+- Atlas integrations with JavaPoet source code generation
+- Improvements to dropper
+- Support for runtime and application manipulations
 - Updated dependencies
-- Re-organized pacakges
+- Re-organized packages
 - Migrated to Java 8
 - Bumped major version and updated copyright information
 
