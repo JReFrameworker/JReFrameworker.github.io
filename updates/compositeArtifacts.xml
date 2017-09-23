@@ -5,7 +5,14 @@
     <property name='p2.timestamp' value='1483488000'/>
     <property name='p2.compressed' value='false'/>
   </properties>
-  <children size='1'>
-    <child location='1.3.0'/>
+  <children size='3'>
+    <!-- Atlas and its dependencies -->
+    <child location='http://download.ensoftcorp.com/atlas/eclipse'/>
+
+    <!-- support plugins -->
+    <child location='support'/>
+
+    <!-- jreframeworker releases -->
+    <child location='releases'/>
   </children>
 </repository>
