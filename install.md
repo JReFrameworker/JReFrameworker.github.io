@@ -4,7 +4,7 @@ title: Install
 permalink: /install/
 ---
 
-Installing the JReFrameworker Eclipse plugin is easy.  It is recommended to install the plugin from the provided update site, but it is also possible to install from source. The current version of JReFrameworker has been tested on [Eclipse Neon](https://www.eclipse.org/neon/) ([Eclipse Luna](https://eclipse.org/luna/) and [Eclipse Mars](https://www.eclipse.org/mars/) should work as well).
+Installing the JReFrameworker Eclipse plugin is easy.  It is recommended to install the plugin from the provided update site, but it is also possible to install from source. The current version of JReFrameworker has been tested on [Eclipse Oxygen](https://www.eclipse.org/oxygen/) and [Eclipse Neon](https://www.eclipse.org/neon/) (previous versions of [Eclipse Luna](https://eclipse.org/luna/) and [Eclipse Mars](https://www.eclipse.org/mars/) should work as well).
         
 ## Installing from update site
 Follow the steps below to install the JReFrameworker plugin from the Eclipse update site.
