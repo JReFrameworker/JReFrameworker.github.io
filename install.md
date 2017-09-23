@@ -22,7 +22,7 @@ If you want to install from source for bleeding edge changes, first grab a copy 
 
 ## Changelog
 
-### 1.3.0 (Derbycon 7 Release)
+### 1.3.0 (Derbycon 7.0 Release)
 - Migrated to Eclipse Oxygen
 - Incremental Builder
 - Finality and visibility annotations
