@@ -20,8 +20,7 @@ Ready to get started?
 This tool was presented at [DEFCON 24](https://www.defcon.org/html/defcon-24/dc-24-speakers.html#Holland) and [Derbycon 7.0](https://www.derbycon.com/saturday-schedule/#event-76). Thanks to all those that attended! The JReFrameworker modules developed for each presentation are available in the [github.com/JReFrameworker/modules](https://github.com/JReFrameworker/modules) repository.
 
 ### Derybcon 7.0 (2017)
-<center><iframe width="560" height="315" src="//www.youtube.com/embed/AvI6sJybgF4" frameborder="0" allowfullscreen></iframe></center>
-**Materials:** [Slides](https://ben-holland.com/slides/JReFrameworker-OneYearLater.pdf)
+**Materials:** [Slides](https://ben-holland.com/slides/JReFrameworker-OneYearLater.pdf), Demos [1](https://youtu.be/9B28XJHpciA), [2](https://youtu.be/GBaIhclKEkM), [3](https://youtu.be/e4zrUgwvclE), [4](https://youtu.be/KUT9jq3n6zI), [5](https://youtu.be/r8kqOQwdlAE), [6](https://youtu.be/EmxTmMFrnzU), [7](https://youtu.be/9g8IyJ74LyA), [8](https://youtu.be/zF7VuForG0s), [9](https://youtu.be/7YjOOsH8gL0)
 
 ### DEFCON 24 (2016)
 <center><iframe width="560" height="315" src="//www.youtube.com/embed/zomaLPN2KNY" frameborder="0" allowfullscreen></iframe></center>
