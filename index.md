@@ -21,15 +21,15 @@ This tool was presented at [DEFCON 24](https://www.defcon.org/html/defcon-24/dc-
 
 ### Derybcon 7.0 (2017)
 
-<center><iframe width="560" height="315" src="//www.youtube.com/embed/zomaLPN2KNY" frameborder="0" allowfullscreen></iframe></center>
+<center><iframe width="560" height="315" src="//www.youtube.com/embed/AvI6sJybgF4" frameborder="0" allowfullscreen></iframe></center>
 
-**Materials:** [Slides](https://ben-holland.com/slides/JReFrameworker-OneYearLater.pdf), Demos [1](https://youtu.be/9B28XJHpciA), [2](https://youtu.be/GBaIhclKEkM), [3](https://youtu.be/e4zrUgwvclE), [4](https://youtu.be/KUT9jq3n6zI), [5](https://youtu.be/r8kqOQwdlAE), [6](https://youtu.be/EmxTmMFrnzU), [7](https://youtu.be/9g8IyJ74LyA), [8](https://youtu.be/zF7VuForG0s), [9](https://youtu.be/7YjOOsH8gL0)
+<p><strong>Materials:</strong> <a href="https://ben-holland.com/slides/JReFrameworker-OneYearLater.pdf">Slides</a>, Demos <a href="https://youtu.be/9B28XJHpciA">1</a>, <a href="https://youtu.be/GBaIhclKEkM">2</a>, <a href="https://youtu.be/e4zrUgwvclE">3</a>, <a href="https://youtu.be/KUT9jq3n6zI">4</a>, <a href="https://youtu.be/r8kqOQwdlAE">5</a>, <a href="https://youtu.be/EmxTmMFrnzU">6</a>, <a href="https://youtu.be/9g8IyJ74LyA">7</a>, <a href="https://youtu.be/zF7VuForG0s">8</a>, <a href="https://youtu.be/7YjOOsH8gL0">9</a></p>
 
 ### DEFCON 24 (2016)
 
 <center><iframe width="560" height="315" src="//www.youtube.com/embed/zomaLPN2KNY" frameborder="0" allowfullscreen></iframe></center>
 
-**Materials:** [Slides](https://ben-holland.com/slides/Developing_Managed_Code_Rootkits.pdf), Demos [1](https://youtu.be/ZVli0XJJR5s), [2](https://youtu.be/GFuMRK-Bdso), [3](https://youtu.be/O_kGAwSnZns), [4](https://youtu.be/6hb68m1x9-o)
+<p><strong>Materials:</strong> <a href="https://ben-holland.com/slides/Developing_Managed_Code_Rootkits.pdf">Slides</a>, Demos <a href="https://youtu.be/ZVli0XJJR5s">1</a>, <a href="https://youtu.be/GFuMRK-Bdso">2</a>, <a href="https://youtu.be/O_kGAwSnZns">3</a>, <a href="https://youtu.be/6hb68m1x9-o">4</a></p>
 
 ## Source Code
 Need additional resources?  Checkout the [Javadocs](/javadoc/index.html) or grab a copy of the [source](https://github.com/JReFrameworker/JReFrameworker).
