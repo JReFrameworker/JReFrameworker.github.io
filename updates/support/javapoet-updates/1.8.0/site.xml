@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/com.squareup.javapoet.feature_1.8.0.201709222320.jar" id="com.squareup.javapoet.feature" version="1.8.0.201709222320">
+   <feature url="features/support.com.squareup.javapoet.feature_1.8.0.201801032026.jar" id="support.com.squareup.javapoet.feature" version="1.8.0.201801032026">
       <category name="jreframeworker.support.category"/>
    </feature>
    <category-def name="jreframeworker.support.category" label="Third Party Support Plugins">
