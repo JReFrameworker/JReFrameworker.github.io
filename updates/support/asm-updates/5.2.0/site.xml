@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/support.org.objectweb.asm.feature_5.2.0.201801032025.jar" id="support.org.objectweb.asm.feature" version="5.2.0.201801032025">
+   <feature url="features/support.org.objectweb.asm.feature_5.2.0.jar" id="support.org.objectweb.asm.feature" version="5.2.0">
       <category name="jreframeworker.support.category"/>
    </feature>
    <category-def name="jreframeworker.support.category" label="Third Party Support Plugins">

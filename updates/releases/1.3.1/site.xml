@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/com.jreframeworker.atlas.feature_1.3.1.201801032030.jar" id="com.jreframeworker.atlas.feature" version="1.3.1.201801032030">
+   <feature url="features/com.jreframeworker.atlas.feature_1.3.1.201801032104.jar" id="com.jreframeworker.atlas.feature" version="1.3.1.201801032104">
       <category name="jreframeworker.category"/>
    </feature>
-   <feature url="features/com.jreframeworker.feature_1.3.1.201801032030.jar" id="com.jreframeworker.feature" version="1.3.1.201801032030">
+   <feature url="features/com.jreframeworker.feature_1.3.1.201801032104.jar" id="com.jreframeworker.feature" version="1.3.1.201801032104">
       <category name="jreframeworker.category"/>
    </feature>
    <category-def name="jreframeworker.category" label="JReFrameworker">
